@@ -3,15 +3,13 @@ import speech_recognition as sr
 import pyaudio
 if __name__ == "__main__":
     
-
     sr.Microphone.list_microphone_names()
     mic = sr.Microphone(1)
     recog = sr.Recognizer()
-
+    
     with mic as source:
         audio = recog.listen(source)
-
-
+        
     with mic as source:
         while True:
             audio = recog.listen(source)
